@@ -4,8 +4,8 @@
 
 var $bu_= new function() {
     var s=this;
-    this.version="3.3.22";
-    this.vsakt={c:"84",f:79,s:"13.1.2",e:84,i:12,ios:"13.3",samsung:12.0,o:70,e_a:45.06,o_a:59.1,y:"20.8",v:3.2,uc:"13.2.8"};
+    this.version="3.3.24";
+    this.vsakt={c:"85",f:81,s:"13.1.2",e:85,i:12,ios:"13.3",samsung:12.0,o:71,e_a:45.07,o_a:59.1,y:"20.9.1",v:3.3,uc:"13.3"};
     //severely insecure below(!) this version, insecure means remote code execution that is actively being exploited
     this.vsinsecure_below = {c:"78.0.3904.87",f:72,s:"11.1.1",e:16,i:11,ios:"12.3",samsung:9.0,o:62,o_a:52,y:"20",v:"2.7",uc:"13.1"};
     this.vsdefault = {c:-3,f:-3,s:-1,e:17,i:11,ios:10,samsung:9.9,o:-3,o_a:-3,y:20.4,v:2.6,uc:13.0,a:535};
@@ -142,7 +142,7 @@ var $bu_= new function() {
 
     r.is_insecure= r.is_insecure|| !s.vsinsecure_below[r.n] ? undefined :  s.less(r.fullv,s.vsinsecure_below[r.n])===1;
     
-    if ((r.n==="f" && (r.vmaj===68 || r.vmaj===60)) || (r.n==="i" && r.vmaj===11)) {
+    if ((r.n==="f" && (r.vmaj===78)) || (r.n==="i" && r.vmaj===11)) {
         r.is_supported=true;
         r.is_insecure=false;
         if (r.n==="f")
@@ -412,7 +412,7 @@ t.uz= {'msg': 'Sizning ({brow_name}) veb-brauzeringiz eskirgan','msgmore': 'Xavf
 t.vi= {'msg': 'Trình duyệt web của bạn ({brow_name}) đã lỗi thời.','msgmore': 'Cập nhật trình duyệt của bạn để có thêm bảo mật, tốc độ và trải nghiệm tốt nhất trên trang web này.','bupdate': 'Cập nhật trình duyệt','bignore': 'Bỏ qua', 'remind': 'Bạn sẽ được nhắc nhở sau {days} ngày.', 'bnever': 'Không bao giờ hiển thị lại'}
 t.zh= {'msg': '您的網路瀏覽器（{brow_name}）已過舊。','msgmore': '更新您的瀏覽器以獲得更佳的安全性、速度以及在此網站的最佳體驗。','bupdate': '更新瀏覽器','bignore': '忽略', 'remind': '您將在 {days} 天後收到提醒。', 'bnever': '不要再顯示'}
 t["zh-tw"]= t["zh-hans-cn"] ={'msg': '您的網路瀏覽器（{brow_name}）已過舊。','msgmore': '更新您的瀏覽器以獲得更佳的安全性、速度以及在此網站的最佳體驗。','bupdate': '更新瀏覽器','bignore': '忽略', 'remind': '您將在 {days} 天後收到提醒。', 'bnever': '不要再顯示'}
-var custom_text = op["text_" + op.llfull] || op["text_" + op.ll] || op["text_in_" + op.ll] || op["text_for_" + bb.n] || op["text_for_"  + bb.n + "_in_" + op.ll] || op.text
+var custom_text = op["text_for_"  + bb.n + "_in_" + op.ll] || op["text_for_" + bb.n] || op["text_" + op.llfull] || op["text_in_" + op.ll] || op["text_" + op.ll]  ||   op.text
 t = ta = t[op.llfull] || t[op.ll] || t.en;
 if (custom_text) {
     if (typeof custom_text === 'string')
